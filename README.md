@@ -10,6 +10,10 @@ Tailspin Toys is a crowdfunding platform for games with a developer theme. The p
 - **Vitest** — unit tests for the data layer and pure transforms.
 - **Playwright** — end-to-end tests run against the built static site.
 
+## Coding standards
+
+Repository-wide standards are documented in [`.github/instructions`](.github/instructions). In particular, comments should explain intent rather than restate code; exported functions in `db/` and `src/lib/` require TSDoc for their purpose, parameters, and return value; and reusable Astro components must document their `Props` interface. Data-layer TypeScript uses four-space indentation, single-quoted strings, semicolons, and trailing commas in multiline constructs, with ESLint enforcing these mechanical rules for `db/` and `src/lib/`.
+
 The database is migrated and seeded automatically before `dev`/`build` (via the `predev`/`prebuild` npm scripts) and is written to the gitignored `tailspin.db` file.
 
 ## Using this template

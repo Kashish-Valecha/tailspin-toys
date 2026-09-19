@@ -20,6 +20,13 @@ Refer to technology-specific instruction files:
 
 ## Core Principles
 
+### Comments and Documentation
+
+- Comment intent, not mechanics: explain why a non-obvious decision or constraint exists rather than restating what the markup or script already says.
+- Keep comments short, specific, and current. Treat an outdated comment as a defect and update or remove it when changing the related code.
+- Use TSDoc for component contracts: every reusable component must document its `Props` interface so required and optional inputs are clear to callers.
+- Do not add comments solely to make a file appear documented; prefer descriptive names and semantic markup when they make the code self-explanatory.
+
 ### Testability
 
 - Every interactive element MUST include a `data-testid` attribute
