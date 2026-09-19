@@ -49,6 +49,14 @@ Before you can run and test the application locally, you'll need to install:
 
 ## Making Changes
 
+### Coding Standards
+
+- Comment intent, constraints, and non-obvious decisions rather than restating code. Keep comments current when the related implementation changes.
+- Add TSDoc to every exported function in `db/` and `src/lib/`, documenting its purpose, parameters (including injectable `db` arguments), and return value.
+- Document the `Props` interface for every reusable Astro component.
+- Format data-layer TypeScript with four-space indentation, single-quoted strings, semicolons, and trailing commas in multiline constructs. ESLint enforces these mechanical rules for `db/` and `src/lib/`.
+- See the repository instruction files in [`.github/instructions`](.github/instructions) for technology-specific guidance.
+
 ### Data Layer (Drizzle + Node SQLite)
 
 - Define tables in `db/schema.ts`; generate a migration with `npm run db:generate` after schema changes
